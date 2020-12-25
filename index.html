@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bone-Conducted Speech to Air-Conducted Speech Conversion Based on Cycle-Consistent Adversarial Networks</title>
+</head>
+
+<body>
+
+
+    <h2 align="center"> Audio samples for "Bone-Conducted Speech to Air-Conducted Speech Conversion Based on Cycle-Consistent Adversarial Networks"</h2>
+    <!-- <div><b>Authors:</b> WeiWei Yu, Jian Zhou, HuaBin Wang, Liang Tao, Hon Keung Kwan</div> -->
+    <div><b>Abstract:</b> Compared with traditional Air-Conducted Micro-phone (ACM) speech, 
+        Bone-Conducted Microphone (BCM) speech has the advantage of shielding background noise and 
+        helps to improve the communication quality in the strong noise environment. 
+        This paper proposes a method that uses Cycle-Consistent Adversarial Networks (CycleGAN) to extend the bandwidth for converting BCM speech to ACM speech based on the analysis of the bandwidth difference. 
+        The proposed method learns the mapping relationship between BCM speech and ACM speech without relying on parallel data, and does not require any additional data, modules or alignment process, it also avoids the over smoothing that is easy to appear in many statistical models. The experimental results show that the method can better reconstruct the high-frequency components of BCM speech. 
+        Compared with the original speech, it improves the subjective and objective results, and obtains Mel-spectrum features with higher similarity to the target speech.</div>
+
+
+    <h4>Comparing of different models(Normal, Bone, GMM, noparalleCycleGAN ): </h4>
+
+    <table border="1">
+        <tr>
+            <th>Normal</th>
+            <th>Bone</th>
+            <!-- <th>lstm</th> -->
+            <th>GMM</th>
+            <th>BLSTM</th>
+            <th>noparalleCycleGAN</th>
+            <!-- <th>Causal-local-att-expanded</th> -->
+            <!-- <th>Causal-local-att-staecked</th> -->
+        </tr>
+        <tr>
+            <td align="center">A</td>
+            <td align="center">B</td>
+            <td align="center">C</td>
+            <td align="center">D</td>
+            <td align="center">E</td>
+            <!-- <td align="center">F</td>
+	<td align="center">G</td>
+	<td align="center">H</td> -->
+        </tr>
+    </table>
+
+    <blockquote>
+        <table>
+            <tr>
+                <td colspan=2><span>1. test001.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src="Samples/Normal/011317.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
+                        <source src="Samples/Bone/011317.wav">  </audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
+                        <source src="Samples/GMM/wo_MLPG_011317.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
+                        <source src="Samples/BLSTM/011317.wav"></audio>
+                </td>
+            <!-- </tr>
+            <tr> -->
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src="Samples/CycleGAN/011317.wav"></audio>
+                </td>
+
+                <!-- <td><div style="float:left;width:20px;  margin-top:16px;">F</div><audio controls><source src="samples/d-s/test001.wav">  </audio></td> <td><div style="float:left;width:20px; margin-top: 16px;">G</div><audio controls>  <source src="samples/l-e/test001.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">H</div><audio controls><source src="samples/l-s/test001.wav"></audio></td></tr> -->
+            </tr>
+            <tr>
+                <td colspan=2><span>2. test002.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src="Samples/Normal/011318.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div> <audio controls>
+                        <source src="Samples/Bone/011318.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div> <audio controls>
+                        <source src="Samples/GMM/wo_MLPG_011318.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div> <audio controls>
+                        <source src="Samples/BLSTM/011318.wav"></audio>
+                </td>
+            
+            <!-- <tr> -->
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src="Samples/CycleGAN/011318.wav"></audio>
+
+                    <!-- </td><td><div style="float:left;width:20px; margin-top:16px;">F</div><audio controls><source src="samples/d-s/test002.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">G</div><audio controls><source src="samples/l-e/test002.wav"></audio> </td><td><div style="float:left;width:20px; margin-top:16px;">H</div> <audio controls><source src="samples/l-s/test002.wav"></audio></td></tr> -->
+            </tr>
+            
+            <tr>
+                <td colspan=2><span>3. test003.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src="Samples/Normal/011319.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
+                        <source src="Samples/Bone/011319.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
+                        <source src="Samples/GMM/wo_MLPG_011319.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
+                        <source src="Samples/BLSTM/011319.wav"></audio>
+            <!-- </tr>
+            <tr> -->
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src="Samples/CycleGAN/011319.wav"></audio>
+                </td>
+                <!-- <td><div style="float:left;width:20px; margin-top:16px;">F</div><audio controls><source src="samples/d-s/test003.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">G</div><audio controls><source src="samples/l-e/test003.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">H</div><audio controls><source src="samples/l-s/test003.wav"></audio></td></tr> -->
+            </tr>
+            <tr>
+                <td colspan=2><span>4. test004.wav.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
+                        <source src="Samples/Normal/011320.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
+                        <source src="Samples/Bone/011320.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
+                        <source src="Samples/GMM/wo_MLPG_011320.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
+                        <source src="Samples/BLSTM/011320.wav"></audio>
+                </td>
+            <!-- </tr>
+            <tr> -->
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src="Samples/CycleGAN/011320.wav"></audio>
+                </td>
+
+                
+        </table>
+    </blockquote>
+
+</body>
+
+</html>
