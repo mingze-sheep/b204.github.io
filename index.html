@@ -19,16 +19,17 @@
         Compared with the original speech, it improves the subjective and objective results, and obtains Mel-spectrum features with higher similarity to the target speech.</div>
 
 
-    <h4>Comparing of different models(Normal, Bone, GMM, noparalleCycleGAN ): </h4>
+    <h4>Comparing of different models(Normal, Whisper, GMM, BLSTM, CycleGAN, Ours ): </h4>
 
     <table border="1">
         <tr>
             <th>Normal</th>
-            <th>Bone</th>
+            <th>Whisper</th>
             <!-- <th>lstm</th> -->
             <th>GMM</th>
             <th>BLSTM</th>
-            <th>noparalleCycleGAN</th>
+            <th>CycleGAN</th>
+            <th>Ours</th>
             <!-- <th>Causal-local-att-expanded</th> -->
             <!-- <th>Causal-local-att-staecked</th> -->
         </tr>
@@ -38,6 +39,7 @@
             <td align="center">C</td>
             <td align="center">D</td>
             <td align="center">E</td>
+            <td align="center">F</td>
             <!-- <td align="center">F</td>
 	<td align="center">G</td>
 	<td align="center">H</td> -->
@@ -52,25 +54,29 @@
             <tr>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
-                        <source src="Samples/Normal/011317.wav"></audio>
+                        <source src="Samples/Normal/fn001.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
-                        <source src="Samples/Bone/011317.wav">  </audio>
+                        <source src="Samples/Whisper/fw001.wav">  </audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
-                        <source src="Samples/GMM/wo_MLPG_011317.wav"></audio>
+                        <source src="Samples/GMM/generated_fn001.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
-                        <source src="Samples/BLSTM/011317.wav"></audio>
+                        <source src="Samples/BLSTM/generated_fn001.wav"></audio>
                 </td>
             <!-- </tr>
             <tr> -->
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
-                        <source src="Samples/CycleGAN/011317.wav"></audio>
+                        <source src="Samples/CycleGAN/generated_fn001.wav"></audio>
+                </td>
+                <td>
+                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                        <source src="Samples/Ours/generated_fn001.wav"></audio>
                 </td>
 
                 <!-- <td><div style="float:left;width:20px;  margin-top:16px;">F</div><audio controls><source src="samples/d-s/test001.wav">  </audio></td> <td><div style="float:left;width:20px; margin-top: 16px;">G</div><audio controls>  <source src="samples/l-e/test001.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">H</div><audio controls><source src="samples/l-s/test001.wav"></audio></td></tr> -->
