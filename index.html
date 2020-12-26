@@ -3,20 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bone-Conducted Speech to Air-Conducted Speech Conversion Based on Cycle-Consistent Adversarial Networks</title>
+    <title>Attention-Guided Generative Adversarial Networks for Whisper-to-Normal Speech Conversion Using Mel-Spectrogram</title>
 </head>
 
 <body>
 
 
-    <h2 align="center"> Audio samples for "Bone-Conducted Speech to Air-Conducted Speech Conversion Based on Cycle-Consistent Adversarial Networks"</h2>
+    <h2 align="center"> Audio samples for "Attention-Guided Generative Adversarial Networks for Whisper-to-Normal Speech Conversion Using Mel-Spectrogram"</h2>
     <!-- <div><b>Authors:</b> WeiWei Yu, Jian Zhou, HuaBin Wang, Liang Tao, Hon Keung Kwan</div> -->
-    <div><b>Abstract:</b> Compared with traditional Air-Conducted Micro-phone (ACM) speech, 
-        Bone-Conducted Microphone (BCM) speech has the advantage of shielding background noise and 
-        helps to improve the communication quality in the strong noise environment. 
-        This paper proposes a method that uses Cycle-Consistent Adversarial Networks (CycleGAN) to extend the bandwidth for converting BCM speech to ACM speech based on the analysis of the bandwidth difference. 
-        The proposed method learns the mapping relationship between BCM speech and ACM speech without relying on parallel data, and does not require any additional data, modules or alignment process, it also avoids the over smoothing that is easy to appear in many statistical models. The experimental results show that the method can better reconstruct the high-frequency components of BCM speech. 
-        Compared with the original speech, it improves the subjective and objective results, and obtains Mel-spectrum features with higher similarity to the target speech.</div>
+    <div><b>Abstract:</b> 耳语音是一种特殊的发声方式，人类在发耳语音时没有声带的振动。相较于正常音，耳语音缺乏基频信息。耳语音的能量比正常音大约低20dB，将耳语音转换成正常音可以提高语音质量及可懂度。在传统的方法中人们通过显式地建模预测正常音的基频来实现耳语音向正常音转换。在本文中，我们提出了一种基于注意力指引的生成对抗网络模型，将耳语音的梅尔频谱参数转换生成为正常音的梅尔频谱参数，然后通过Griffin-Lim算法将正常音的梅尔频谱合成为时域波形，从而隐式地实现了耳语音所缺失基频成分的生成。我们提出的方法在模型训练时是基于帧级别的，在训练前无需对语音参数做时间对齐处理，这使得我们的耳语音转换系统在现实场景中更具适用性。实验结果表明提出的注意力指引生成对抗网络耳语音到正常音转换模型比传统的基于DTW的模型转换效果更佳。</div>
 
 
     <h4>Comparing of different models(Normal, Whisper, GMM, BLSTM, CycleGAN, Ours ): </h4>
@@ -75,7 +70,7 @@
                         <source src="Samples/CycleGAN/generated_fn001.wav"></audio>
                 </td>
                 <td>
-                    <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
+                    <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
                         <source src="Samples/Ours/generated_fn001.wav"></audio>
                 </td>
 
@@ -87,27 +82,32 @@
             <tr>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
-                        <source src="Samples/Normal/011318.wav"></audio>
+                        <source src="Samples/Normal/fn002.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">B</div> <audio controls>
-                        <source src="Samples/Bone/011318.wav"></audio>
+                        <source src="Samples/Whisper/fw002.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">C</div> <audio controls>
-                        <source src="Samples/GMM/wo_MLPG_011318.wav"></audio>
+                        <source src="Samples/GMM/generated_fn002.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">D</div> <audio controls>
-                        <source src="Samples/BLSTM/011318.wav"></audio>
+                        <source src="Samples/BLSTM/generated_fn002.wav"></audio>
                 </td>
             
             <!-- <tr> -->
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
-                        <source src="Samples/CycleGAN/011318.wav"></audio>
+                        <source src="Samples/CycleGAN/generated_fn002.wav"></audio>
+                </td>
+                <td>
+                   <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                       <source src="Samples/Ours/generated_fn002.wav"></audio>
+                </td>
 
-                    <!-- </td><td><div style="float:left;width:20px; margin-top:16px;">F</div><audio controls><source src="samples/d-s/test002.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">G</div><audio controls><source src="samples/l-e/test002.wav"></audio> </td><td><div style="float:left;width:20px; margin-top:16px;">H</div> <audio controls><source src="samples/l-s/test002.wav"></audio></td></tr> -->
+                <!-- <td><div style="float:left;width:20px; margin-top:16px;">F</div><audio controls><source src="samples/d-s/test002.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">G</div><audio controls><source src="samples/l-e/test002.wav"></audio> </td><td><div style="float:left;width:20px; margin-top:16px;">H</div> <audio controls><source src="samples/l-s/test002.wav"></audio></td></tr> -->
             </tr>
             
             <tr>
@@ -116,25 +116,30 @@
             <tr>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">A</div><audio controls>
-                        <source src="Samples/Normal/011319.wav"></audio>
+                        <source src="Samples/Normal/fn003.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">B</div><audio controls>
-                        <source src="Samples/Bone/011319.wav"></audio>
+                        <source src="Samples/Whisper/fw003.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">C</div><audio controls>
-                        <source src="Samples/GMM/wo_MLPG_011319.wav"></audio>
+                        <source src="Samples/GMM/generated_fn003.wav"></audio>
                 </td>
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">D</div><audio controls>
-                        <source src="Samples/BLSTM/011319.wav"></audio>
+                        <source src="Samples/BLSTM/generated_fn003.wav"></audio>
             <!-- </tr>
             <tr> -->
                 <td>
                     <div style="float:left;width:20px; margin-top:16px;">E</div><audio controls>
-                        <source src="Samples/CycleGAN/011319.wav"></audio>
+                        <source src="Samples/CycleGAN/generated_fn003.wav"></audio>
                 </td>
+                <td>
+                   <div style="float:left;width:20px; margin-top:16px;">F</div><audio controls>
+                       <source src="Samples/Ours/generated_fn003.wav"></audio>
+                </td>
+
                 <!-- <td><div style="float:left;width:20px; margin-top:16px;">F</div><audio controls><source src="samples/d-s/test003.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">G</div><audio controls><source src="samples/l-e/test003.wav"></audio></td><td><div style="float:left;width:20px; margin-top:16px;">H</div><audio controls><source src="samples/l-s/test003.wav"></audio></td></tr> -->
             </tr>
             <tr>
